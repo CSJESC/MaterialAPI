@@ -27,6 +27,9 @@ module.exports = {
     },
     manufacturer: {
     	model: "manufacturer"
+    },
+    included: {
+      model: "device"
     }
   }
 };

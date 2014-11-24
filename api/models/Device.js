@@ -23,7 +23,11 @@ module.exports = {
     },
   	manufacturer: {
   		model: "manufacturer"
-  	}
+  	},
+    components: {
+      collection: "component",
+      via: "included"
+    }
   }
 };
 
