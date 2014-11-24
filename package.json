@@ -1,0 +1,30 @@
+{
+  "name": "MaterialAPI",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "fs-extra": "^0.12.0",
+    "js-yaml": "^3.2.3",
+    "sails": "~0.10.5",
+    "sails-mongo": "^0.10.4",
+    "swagger-express": "^1.0.5",
+    "swagger-ui": "git+https://github.com/g-div/swagger-ui.git"
+  },
+  "devDependencies": {
+    "sails-disk": "~0.10.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "debug": "node debug app.js",
+    "docs": "node config/bootstrap.js"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/g-div/MaterialAPI.git"
+  },
+  "author": "g-div",
+  "license": ""
+}
