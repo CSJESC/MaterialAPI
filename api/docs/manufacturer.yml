@@ -10,6 +10,11 @@ apis:
             dataType: string
             paramType: query
             unique: true
+          - name: email
+            description: "The manufacturer's email contact"
+            dataType: email
+            paramType: query
+            unique: true
           - name: devices
             description: ""
             dataType: foreign key
@@ -42,6 +47,11 @@ apis:
             paramType: query
             unique: true
             required: true
+          - name: email
+            description: "The manufacturer's email contact"
+            dataType: email
+            paramType: query
+            unique: true
           - name: devices
             description: ""
             dataType: foreign key
@@ -69,6 +79,11 @@ apis:
             paramType: query
             unique: true
             required: true
+          - name: email
+            description: "The manufacturer's email contact"
+            dataType: email
+            paramType: query
+            unique: true
           - name: devices
             description: ""
             dataType: foreign key
@@ -101,6 +116,11 @@ apis:
             paramType: query
             unique: true
             required: true
+          - name: email
+            description: "The manufacturer's email contact"
+            dataType: email
+            paramType: query
+            unique: true
           - name: devices
             description: ""
             dataType: foreign key

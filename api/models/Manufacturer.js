@@ -8,7 +8,8 @@
 module.exports = {
 
   descriptions: {
-    name: "The manufacturer's name"
+    name: "The manufacturer's name",
+    email: "The manufacturer's email contact"
   },
   attributes: {
   	name: {
@@ -19,6 +20,11 @@ module.exports = {
   		unique: true,
   		required: true
   	},
+    email: {
+      type: 'email',
+      unique: true,
+      email: true
+    },
     devices: {
       collection: "device",
       via: "manufacturer"

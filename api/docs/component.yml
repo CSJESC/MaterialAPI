@@ -22,6 +22,10 @@ apis:
             description: ""
             dataType: foreign key
             paramType: query
+          - name: included
+            description: ""
+            dataType: foreign key
+            paramType: query
           - name: id
             description: The ID
             dataType: ID
@@ -54,6 +58,10 @@ apis:
             description: ""
             dataType: foreign key
             paramType: query
+          - name: included
+            description: ""
+            dataType: foreign key
+            paramType: query
         httpMethod: POST
         consumes:
           - application/json
@@ -78,6 +86,10 @@ apis:
             dataType: foreign key
             paramType: query
           - name: manufacturer
+            description: ""
+            dataType: foreign key
+            paramType: query
+          - name: included
             description: ""
             dataType: foreign key
             paramType: query
@@ -110,6 +122,10 @@ apis:
             dataType: foreign key
             paramType: query
           - name: manufacturer
+            description: ""
+            dataType: foreign key
+            paramType: query
+          - name: included
             description: ""
             dataType: foreign key
             paramType: query
