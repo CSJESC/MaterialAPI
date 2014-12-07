@@ -19,6 +19,10 @@ module.exports = {
 
   models: {
      connection: 'localDiskDb'
+  },
+
+  cors: {
+    allRoutes: true
   }
 
 };
