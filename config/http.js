@@ -93,22 +93,21 @@ module.exports.http = {
   ***************************************************************************/
 
   customMiddleware: function(app) {
-    var files = fs.readdirSync('./api/docs').map(function(file) {
-      return path.resolve('./api/docs/', file);
+    var files = fs.readdirSync(sails.config.swagger.docsFolder).map(function(file) {
+      return path.resolve(sails.config.swagger.docsFolder, file);
     });
 
     app.disable('x-powered-by');
-
     app.use(swagger.init(app, {
       apiVersion: '1.0',
-      swaggerVersion: '1.2.5',
-      swaggerURL: '/docs',
-      swaggerJSON: '/api-docs.json',
-      swaggerUI: './node_modules/swagger-ui/dist',
-      basePath: 'http://localhost:1337/api/v1',
+      swaggerVersion: sails.config.swagger.swaggerVersion,
+      swaggerURL: sails.config.swagger.url,
+      swaggerJSON: sails.config.swagger.apiDocs,
+      swaggerUI: sails.config.swagger.uiDist,
+      basePath: 'http://localhost:' + sails.config.port + sails.config.blueprints.prefix,
       info: {
-        title: 'swagger-express sample app',
-        description: 'Swagger + Express = {swagger-express}'
+        title: sails.config.swagger.title,
+        description: sails.config.swagger.description
       },
       apis: files
     }));
