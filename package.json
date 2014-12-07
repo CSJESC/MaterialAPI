@@ -6,11 +6,11 @@
   "keywords": [],
   "dependencies": {
     "fs-extra": "^0.12.0",
-    "js-yaml": "^3.2.3",
     "sails": "~0.10.5",
     "sails-mongo": "^0.10.4",
     "swagger-express": "^1.0.5",
-    "swagger-ui": "git+https://github.com/g-div/swagger-ui.git"
+    "swagger-ui": "git+https://github.com/g-div/swagger-ui.git",
+    "yamlish": "0.0.6"
   },
   "devDependencies": {
     "sails-disk": "~0.10.0"
