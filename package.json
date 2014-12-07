@@ -18,7 +18,7 @@
   "scripts": {
     "start": "node app.js",
     "debug": "node debug app.js",
-    "docs": "node config/bootstrap.js"
+    "docs": "node utils/docsGenerator.js"
   },
   "main": "app.js",
   "repository": {
