@@ -93,6 +93,8 @@ module.exports.http = {
   ***************************************************************************/
 
   customMiddleware: function(app) {
+    var basePath = (sails.config.environment === "production") ? sails.config.blueprints.prefix : 'http://localhost:' + sails.config.port + sails.config.blueprints.prefix;
+
     var files = fs.readdirSync(sails.config.swagger.docsFolder).map(function(file) {
       return path.resolve(sails.config.swagger.docsFolder, file);
     });
@@ -104,7 +106,7 @@ module.exports.http = {
       swaggerURL: sails.config.swagger.url,
       swaggerJSON: sails.config.swagger.apiDocs,
       swaggerUI: sails.config.swagger.uiDist,
-      basePath: 'http://localhost:' + sails.config.port + sails.config.blueprints.prefix,
+      basePath: basePath,
       info: {
         title: sails.config.swagger.title,
         description: sails.config.swagger.description
