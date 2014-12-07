@@ -1,0 +1,149 @@
+
+    resourcePath:   /manufacturers
+    swaggerVersion: 1.2.5
+    basePath:       |
+      http://localhost:1337/api/v1
+    apis:           
+      - 
+        path:       /manufacturers
+        operations: 
+          - 
+            httpMethod: GET
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   getmanufacturers
+            parameters: 
+              - 
+                name:        name
+                description: The manufacturer's name
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        email
+                description: The manufacturer's email contact
+                dataType:    email
+                paramType:   query
+                unique:      true
+              - 
+                name:        devices
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        components
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        parts
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+          - 
+            httpMethod: POST
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   postmanufacturers
+            parameters: 
+              - 
+                name:        name
+                description: The manufacturer's name
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        email
+                description: The manufacturer's email contact
+                dataType:    email
+                paramType:   query
+                unique:      true
+              - 
+                name:        devices
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        components
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        parts
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+          - 
+            httpMethod: PUT
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   putmanufacturers
+            parameters: 
+              - 
+                name:        name
+                description: The manufacturer's name
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        email
+                description: The manufacturer's email contact
+                dataType:    email
+                paramType:   query
+                unique:      true
+              - 
+                name:        devices
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        components
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        parts
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+          - 
+            httpMethod: DELETE
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   deletemanufacturers
+            parameters: 
+              - 
+                name:        name
+                description: The manufacturer's name
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        email
+                description: The manufacturer's email contact
+                dataType:    email
+                paramType:   query
+                unique:      true
+              - 
+                name:        devices
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        components
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        parts
+                description: 
+                dataType:    foreignKey
+                paramType:   query

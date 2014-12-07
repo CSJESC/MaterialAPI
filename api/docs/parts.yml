@@ -1,0 +1,145 @@
+
+    resourcePath:   /parts
+    swaggerVersion: 1.2.5
+    basePath:       |
+      http://localhost:1337/api/v1
+    apis:           
+      - 
+        path:       /parts
+        operations: 
+          - 
+            httpMethod: GET
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   getparts
+            parameters: 
+              - 
+                name:        name
+                description: The name of the electronic part
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        weight
+                description: The weight of the electronic part
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        materials
+                description: The IDs of included materials
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        included
+                description: The IDs of the included component
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        manufacturer
+                description: The ID of the manufacturer
+                dataType:    foreignKey
+                paramType:   query
+          - 
+            httpMethod: POST
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   postparts
+            parameters: 
+              - 
+                name:        name
+                description: The name of the electronic part
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        weight
+                description: The weight of the electronic part
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        materials
+                description: The IDs of included materials
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        included
+                description: The IDs of the included component
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        manufacturer
+                description: The ID of the manufacturer
+                dataType:    foreignKey
+                paramType:   query
+          - 
+            httpMethod: PUT
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   putparts
+            parameters: 
+              - 
+                name:        name
+                description: The name of the electronic part
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        weight
+                description: The weight of the electronic part
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        materials
+                description: The IDs of included materials
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        included
+                description: The IDs of the included component
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        manufacturer
+                description: The ID of the manufacturer
+                dataType:    foreignKey
+                paramType:   query
+          - 
+            httpMethod: DELETE
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   deleteparts
+            parameters: 
+              - 
+                name:        name
+                description: The name of the electronic part
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        weight
+                description: The weight of the electronic part
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        materials
+                description: The IDs of included materials
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        included
+                description: The IDs of the included component
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        manufacturer
+                description: The ID of the manufacturer
+                dataType:    foreignKey
+                paramType:   query

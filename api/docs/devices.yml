@@ -1,0 +1,125 @@
+
+    resourcePath:   /devices
+    swaggerVersion: 1.2.5
+    basePath:       |
+      http://localhost:1337/api/v1
+    apis:           
+      - 
+        path:       /devices
+        operations: 
+          - 
+            httpMethod: GET
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   getdevices
+            parameters: 
+              - 
+                name:        name
+                description: The name of the device
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        weight
+                description: The total weight of the device
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        manufacturer
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        components
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+          - 
+            httpMethod: POST
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   postdevices
+            parameters: 
+              - 
+                name:        name
+                description: The name of the device
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        weight
+                description: The total weight of the device
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        manufacturer
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        components
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+          - 
+            httpMethod: PUT
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   putdevices
+            parameters: 
+              - 
+                name:        name
+                description: The name of the device
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        weight
+                description: The total weight of the device
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        manufacturer
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        components
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+          - 
+            httpMethod: DELETE
+            consumes:   application/json
+            produces:   application/json
+            protocols:  http
+            nickname:   deletedevices
+            parameters: 
+              - 
+                name:        name
+                description: The name of the device
+                dataType:    string
+                paramType:   query
+                required:    true
+                unique:      true
+              - 
+                name:        weight
+                description: The total weight of the device
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        manufacturer
+                description: 
+                dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        components
+                description: 
+                dataType:    foreignKey
+                paramType:   query
