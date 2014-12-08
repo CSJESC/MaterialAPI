@@ -15,7 +15,7 @@ You should have **Node.js** and **npm** installed.
 ## Generate the documentation
 In order to generate the Swagger interactive documentation run:
 
-  npm run docs
+	npm run docs
 
 ## Start
 
