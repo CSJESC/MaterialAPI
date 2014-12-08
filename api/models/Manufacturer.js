@@ -28,10 +28,6 @@ module.exports = {
       collection: "device",
       via: "manufacturer"
     },
-    components: {
-      collection: "component",
-      via: "manufacturer"
-    },
     parts: {
       collection: "part",
       via: "manufacturer"

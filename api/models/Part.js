@@ -10,7 +10,7 @@ module.exports = {
     name: "The name of the electronic part",
     weight: "The weight of the electronic part",
     materials: "The IDs of included materials",
-    included: "The IDs of the included component",
+    inDevice: "The devices containing this part",
     manufacturer: "The ID of the manufacturer"
   },
   attributes: {
@@ -28,8 +28,8 @@ module.exports = {
     	collection: "material",
     	via: "inPart"
     },
-    included: {
-    	model: "component"
+    inDevices: {
+      model: "device"
     },
     manufacturer: {
     	model: "manufacturer"

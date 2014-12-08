@@ -24,9 +24,9 @@ module.exports = {
   	manufacturer: {
   		model: "manufacturer"
   	},
-    components: {
-      collection: "component",
-      via: "included"
+    parts: {
+      collection: "part",
+      via: "inDevices"
     }
   }
 };

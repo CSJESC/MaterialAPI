@@ -9,5 +9,5 @@ module.exports.swagger = {
   swaggerVersion: '1.2.5',
   operations: ['GET', 'POST', 'PUT', 'DELETE'],
   apiURL: '/api/v1',
-  host: 'http://' + process.env.NODE_HOST || 'http://localhost'
+  host: 'http://' + process.env.NODE_HOST || 'http://localhost:'
 };

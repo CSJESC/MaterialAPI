@@ -10,6 +10,10 @@ var RATINGS = [1, 2, 3, 4, 5];
 module.exports = {
   descriptions: {
     name: "The name of the material",
+    ratingEnv: "The environment-rating of this material",
+    ratingSoc: "The social-rating of this material",
+    ratingHum: "The human-rating of this material",
+    minedIn: "The land where the material originally come from",
     weight: "The weight of the material in a specific part"
   },
   attributes: {
@@ -20,22 +24,22 @@ module.exports = {
   		required: true
     },
     ratingEnv: {
-      type: 'integer',
+      type: "integer",
       enum: RATINGS,
       int: true
     },
     ratingSoc: {
-      type: 'integer',
+      type: "integer",
       enum: RATINGS,
       int: true
     },
     ratingHum: {
-      type: 'integer',
+      type: "integer",
       enum: RATINGS,
       int: true
     },
     minedIn: {
-      type: 'array',
+      type: "array",
       array: true
     },
     weight: {

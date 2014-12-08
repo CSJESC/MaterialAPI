@@ -47,10 +47,17 @@ fs.readdir(modelsDir, function(err, files) {
 
         Object.keys(model.attributes).forEach(function(attribute) {
 
+          var type = model.attributes[attribute].type;
+          if (type === "array") {
+            type = "string";
+          } else if (!type) {
+            type = "foreignKey";
+          }
+
           var param = {
             name: attribute,
             description: model.descriptions[attribute] || "",
-            dataType: model.attributes[attribute].type || "foreignKey",
+            dataType: type,
             paramType: "query"
           };
 
