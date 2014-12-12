@@ -13,8 +13,7 @@ module.exports = {
     ratingEnv: "The environment-rating of this material",
     ratingSoc: "The social-rating of this material",
     ratingHum: "The human-rating of this material",
-    minedIn: "The land where the material originally come from",
-    weight: "The weight of the material in a specific part"
+    minedIn: "The land where the material originally come from"
   },
   attributes: {
   	name: {
@@ -41,10 +40,6 @@ module.exports = {
     minedIn: {
       type: "array",
       array: true
-    },
-    weight: {
-      type: "integer",
-      int: true
     },
     inPart: {
       model: "part"
