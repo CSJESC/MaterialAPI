@@ -38,8 +38,8 @@ module.exports = {
       int: true
     },
     minedIn: {
-      type: "array",
-      array: true
+      collection: "land",
+      via: "materials"
     },
     inPart: {
       model: "part"
