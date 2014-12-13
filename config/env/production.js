@@ -11,6 +11,10 @@
  */
 
 module.exports = {
+  host: 'materia.localhorst.io',
+  basePath: function() {
+    return 'http://' + sails.config.host;
+  },
 
   /***************************************************************************
    * Set the default database connection for models in the production        *
@@ -22,7 +26,7 @@ module.exports = {
   },
 
   /***************************************************************************
-   * Set the port in the production environment to 80                        *
+   * Set the port in the production environment to 8000                      *
    ***************************************************************************/
 
   port: 8000,

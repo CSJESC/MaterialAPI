@@ -11,7 +11,10 @@
  */
 
 module.exports = {
-
+  host: 'localhost',
+  basePath: function() {
+    return 'http://' + sails.config.host + ':' + sails.config.port;
+  },
   /***************************************************************************
    * Set the default database connection for models in the development       *
    * environment (see config/connections.js and config/models.js )           *

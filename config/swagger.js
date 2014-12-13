@@ -8,6 +8,5 @@ module.exports.swagger = {
   description: 'An API to discover what is actually inside your device',
   swaggerVersion: '1.2.5',
   operations: ['GET', 'POST', 'PUT', 'DELETE'],
-  apiURL: '/api/v1',
-  host: 'http://materia.localhorst.io' || 'http://localhost:'
+  apiURL: '/api/v1'
 };
