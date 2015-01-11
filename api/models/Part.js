@@ -26,7 +26,7 @@ module.exports = {
     },
     materials: {
     	collection: "material",
-    	via: "inPart"
+    	via: "usedIn"
     },
     inDevices: {
       model: "device"
