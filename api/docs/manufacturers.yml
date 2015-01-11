@@ -1,8 +1,7 @@
 
     resourcePath:   /manufacturers
     swaggerVersion: 1.2.5
-    basePath:       |
-      http://localhost:1337/api/v1
+    basePath:       /api/v1
     apis:           
       - 
         path:       /manufacturers
@@ -29,11 +28,6 @@
                 unique:      true
               - 
                 name:        devices
-                description: 
-                dataType:    foreignKey
-                paramType:   query
-              - 
-                name:        components
                 description: 
                 dataType:    foreignKey
                 paramType:   query
@@ -68,11 +62,6 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        components
-                description: 
-                dataType:    foreignKey
-                paramType:   query
-              - 
                 name:        parts
                 description: 
                 dataType:    foreignKey
@@ -103,11 +92,6 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        components
-                description: 
-                dataType:    foreignKey
-                paramType:   query
-              - 
                 name:        parts
                 description: 
                 dataType:    foreignKey
@@ -134,11 +118,6 @@
                 unique:      true
               - 
                 name:        devices
-                description: 
-                dataType:    foreignKey
-                paramType:   query
-              - 
-                name:        components
                 description: 
                 dataType:    foreignKey
                 paramType:   query

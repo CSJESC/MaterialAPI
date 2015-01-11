@@ -1,8 +1,7 @@
 
     resourcePath:   /parts
     swaggerVersion: 1.2.5
-    basePath:       |
-      http://localhost:1337/api/v1
+    basePath:       /api/v1
     apis:           
       - 
         path:       /parts
@@ -32,14 +31,29 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        included
-                description: The IDs of the included component
+                name:        materialsName
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
+                name:        inDevices
+                description: 
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        inDevicesNames
+                description: 
+                dataType:    string
                 paramType:   query
               - 
                 name:        manufacturer
                 description: The ID of the manufacturer
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        manufacturerName
+                description: 
+                dataType:    string
                 paramType:   query
           - 
             httpMethod: POST
@@ -66,14 +80,29 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        included
-                description: The IDs of the included component
+                name:        materialsName
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
+                name:        inDevices
+                description: 
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        inDevicesNames
+                description: 
+                dataType:    string
                 paramType:   query
               - 
                 name:        manufacturer
                 description: The ID of the manufacturer
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        manufacturerName
+                description: 
+                dataType:    string
                 paramType:   query
           - 
             httpMethod: PUT
@@ -100,14 +129,29 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        included
-                description: The IDs of the included component
+                name:        materialsName
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
+                name:        inDevices
+                description: 
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        inDevicesNames
+                description: 
+                dataType:    string
                 paramType:   query
               - 
                 name:        manufacturer
                 description: The ID of the manufacturer
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        manufacturerName
+                description: 
+                dataType:    string
                 paramType:   query
           - 
             httpMethod: DELETE
@@ -134,12 +178,27 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        included
-                description: The IDs of the included component
+                name:        materialsName
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
+                name:        inDevices
+                description: 
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        inDevicesNames
+                description: 
+                dataType:    string
                 paramType:   query
               - 
                 name:        manufacturer
                 description: The ID of the manufacturer
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        manufacturerName
+                description: 
+                dataType:    string
                 paramType:   query

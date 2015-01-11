@@ -1,8 +1,7 @@
 
     resourcePath:   /devices
     swaggerVersion: 1.2.5
-    basePath:       |
-      http://localhost:1337/api/v1
+    basePath:       /api/v1
     apis:           
       - 
         path:       /devices
@@ -32,9 +31,19 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        components
+                name:        manufacturerName
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
+                name:        parts
                 description: 
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        partsName
+                description: 
+                dataType:    string
                 paramType:   query
           - 
             httpMethod: POST
@@ -61,9 +70,19 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        components
+                name:        manufacturerName
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
+                name:        parts
                 description: 
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        partsName
+                description: 
+                dataType:    string
                 paramType:   query
           - 
             httpMethod: PUT
@@ -90,9 +109,19 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        components
+                name:        manufacturerName
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
+                name:        parts
                 description: 
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        partsName
+                description: 
+                dataType:    string
                 paramType:   query
           - 
             httpMethod: DELETE
@@ -119,7 +148,17 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        components
+                name:        manufacturerName
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
+                name:        parts
                 description: 
                 dataType:    foreignKey
+                paramType:   query
+              - 
+                name:        partsName
+                description: 
+                dataType:    string
                 paramType:   query

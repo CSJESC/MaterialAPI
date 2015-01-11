@@ -1,52 +1,52 @@
 
-    resourcePath:   /materials
+    resourcePath:   /lands
     swaggerVersion: 1.2.5
     basePath:       /api/v1
     apis:           
       - 
-        path:       /materials
+        path:       /lands
         operations: 
           - 
             httpMethod: GET
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   getmaterials
+            nickname:   getlands
             parameters: 
               - 
                 name:        name
-                description: The name of the material
+                description: The country's name
                 dataType:    string
                 paramType:   query
                 required:    true
                 unique:      true
               - 
-                name:        description
+                name:        mineralIndustryRating
+                description: The Mineral Industry rating fo this country
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        workingConditionsRating
                 description: 
-                dataType:    string
-                paramType:   query
-              - 
-                name:        recyclingRating
-                description: The environment-rating of this material
                 dataType:    integer
                 paramType:   query
               - 
-                name:        healthRating
-                description: The health-risks related to this material
+                name:        humanRightsRating
+                description: The rating about Human Rights in this country
                 dataType:    integer
                 paramType:   query
               - 
-                name:        countryRating
-                description: The rating of working and political conditions in the country where this material is mined
-                dataType:    int
+                name:        localAvarageSalary
+                description: The local avarage salary in this country
+                dataType:    integer
                 paramType:   query
               - 
-                name:        minedIn
-                description: The land where the material originally come from
-                dataType:    foreignKey
+                name:        totalRating
+                description: 
+                dataType:    integer
                 paramType:   query
               - 
-                name:        usedIn
+                name:        materials
                 description: 
                 dataType:    foreignKey
                 paramType:   query
@@ -55,42 +55,42 @@
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   postmaterials
+            nickname:   postlands
             parameters: 
               - 
                 name:        name
-                description: The name of the material
+                description: The country's name
                 dataType:    string
                 paramType:   query
                 required:    true
                 unique:      true
               - 
-                name:        description
+                name:        mineralIndustryRating
+                description: The Mineral Industry rating fo this country
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        workingConditionsRating
                 description: 
-                dataType:    string
-                paramType:   query
-              - 
-                name:        recyclingRating
-                description: The environment-rating of this material
                 dataType:    integer
                 paramType:   query
               - 
-                name:        healthRating
-                description: The health-risks related to this material
+                name:        humanRightsRating
+                description: The rating about Human Rights in this country
                 dataType:    integer
                 paramType:   query
               - 
-                name:        countryRating
-                description: The rating of working and political conditions in the country where this material is mined
-                dataType:    int
+                name:        localAvarageSalary
+                description: The local avarage salary in this country
+                dataType:    integer
                 paramType:   query
               - 
-                name:        minedIn
-                description: The land where the material originally come from
-                dataType:    foreignKey
+                name:        totalRating
+                description: 
+                dataType:    integer
                 paramType:   query
               - 
-                name:        usedIn
+                name:        materials
                 description: 
                 dataType:    foreignKey
                 paramType:   query
@@ -99,42 +99,42 @@
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   putmaterials
+            nickname:   putlands
             parameters: 
               - 
                 name:        name
-                description: The name of the material
+                description: The country's name
                 dataType:    string
                 paramType:   query
                 required:    true
                 unique:      true
               - 
-                name:        description
+                name:        mineralIndustryRating
+                description: The Mineral Industry rating fo this country
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        workingConditionsRating
                 description: 
-                dataType:    string
-                paramType:   query
-              - 
-                name:        recyclingRating
-                description: The environment-rating of this material
                 dataType:    integer
                 paramType:   query
               - 
-                name:        healthRating
-                description: The health-risks related to this material
+                name:        humanRightsRating
+                description: The rating about Human Rights in this country
                 dataType:    integer
                 paramType:   query
               - 
-                name:        countryRating
-                description: The rating of working and political conditions in the country where this material is mined
-                dataType:    int
+                name:        localAvarageSalary
+                description: The local avarage salary in this country
+                dataType:    integer
                 paramType:   query
               - 
-                name:        minedIn
-                description: The land where the material originally come from
-                dataType:    foreignKey
+                name:        totalRating
+                description: 
+                dataType:    integer
                 paramType:   query
               - 
-                name:        usedIn
+                name:        materials
                 description: 
                 dataType:    foreignKey
                 paramType:   query
@@ -143,42 +143,42 @@
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   deletematerials
+            nickname:   deletelands
             parameters: 
               - 
                 name:        name
-                description: The name of the material
+                description: The country's name
                 dataType:    string
                 paramType:   query
                 required:    true
                 unique:      true
               - 
-                name:        description
+                name:        mineralIndustryRating
+                description: The Mineral Industry rating fo this country
+                dataType:    integer
+                paramType:   query
+              - 
+                name:        workingConditionsRating
                 description: 
-                dataType:    string
-                paramType:   query
-              - 
-                name:        recyclingRating
-                description: The environment-rating of this material
                 dataType:    integer
                 paramType:   query
               - 
-                name:        healthRating
-                description: The health-risks related to this material
+                name:        humanRightsRating
+                description: The rating about Human Rights in this country
                 dataType:    integer
                 paramType:   query
               - 
-                name:        countryRating
-                description: The rating of working and political conditions in the country where this material is mined
-                dataType:    int
+                name:        localAvarageSalary
+                description: The local avarage salary in this country
+                dataType:    integer
                 paramType:   query
               - 
-                name:        minedIn
-                description: The land where the material originally come from
-                dataType:    foreignKey
+                name:        totalRating
+                description: 
+                dataType:    integer
                 paramType:   query
               - 
-                name:        usedIn
+                name:        materials
                 description: 
                 dataType:    foreignKey
                 paramType:   query
