@@ -11,9 +11,8 @@
  */
 
 module.exports = {
-  host: 'materia.localhorst.io',
   basePath: function() {
-    return 'http://' + sails.config.host;
+    return 'http://materia.localhorst.io";
   },
 
   /***************************************************************************
