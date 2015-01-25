@@ -1,17 +1,17 @@
 
-    resourcePath:   /lands
+    resourcePath:   /countrys
     swaggerVersion: 1.2.5
     basePath:       /api/v1
     apis:           
       - 
-        path:       /lands
+        path:       /countrys
         operations: 
           - 
             httpMethod: GET
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   getlands
+            nickname:   getcountrys
             parameters: 
               - 
                 name:        name
@@ -55,7 +55,7 @@
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   postlands
+            nickname:   postcountrys
             parameters: 
               - 
                 name:        name
@@ -99,7 +99,7 @@
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   putlands
+            nickname:   putcountrys
             parameters: 
               - 
                 name:        name
@@ -143,7 +143,7 @@
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   deletelands
+            nickname:   deletecountrys
             parameters: 
               - 
                 name:        name

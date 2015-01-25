@@ -21,66 +21,69 @@ fs.readdir(modelsDir, function(err, files) {
     if (err) throw err;
 
     files.forEach(function(file) {
-      var model = require(path.resolve(__dirname, '..', modelsDir, file));
-      var modelName = file.replace(".js", "").toLowerCase() + "s";
-      var resourcePath = "/" + modelName;
+      if (file !== 'Passport.js' && file !== 'User.js') {
+        var model = require(path.resolve(__dirname, '..', modelsDir, file));
+        var modelName = file.replace(".js", "").toLowerCase() + "s";
+        var resourcePath = "/" + modelName;
 
-      var spec = {
-          resourcePath: resourcePath,
-          swaggerVersion: config.swaggerVersion,
-          basePath: config.apiURL,
-          apis: [{
-            path: resourcePath,
-            operations: []
-          }]
-      };
-
-      config.operations.forEach(function(method) {
-        var result = {
-          httpMethod: method,
-          consumes: "application/json",
-          produces: "application/json",
-          protocols: "http",
-          nickname: method.toLowerCase() + modelName,
-          parameters: []
+        var spec = {
+            resourcePath: resourcePath,
+            swaggerVersion: config.swaggerVersion,
+            basePath: config.apiURL,
+            apis: [{
+              path: resourcePath,
+              operations: []
+            }]
         };
 
-        Object.keys(model.attributes).forEach(function(attribute) {
-
-          var type = model.attributes[attribute].type;
-          if (type === "array") {
-            type = "string";
-          } else if (!type) {
-            type = "foreignKey";
-          }
-
-          var param = {
-            name: attribute,
-            description: model.descriptions[attribute] || "",
-            dataType: type,
-            paramType: "query"
+        config.operations.forEach(function(method) {
+          var result = {
+            httpMethod: method,
+            consumes: "application/json",
+            produces: "application/json",
+            protocols: "http",
+            nickname: method.toLowerCase() + modelName,
+            parameters: []
           };
 
-          if (model.attributes[attribute].required)
-            param.required = model.attributes[attribute].required;
+          Object.keys(model.attributes).forEach(function(attribute) {
 
-          if (model.attributes[attribute].unique)
-            param.unique = model.attributes[attribute].unique;
+            var type = model.attributes[attribute].type;
+            if (type === "array") {
+              type = "string";
+            } else if (!type) {
+              type = "foreignKey";
+            }
 
-          result.parameters.push(param);
+            var param = {
+              name: attribute,
+              description: model.descriptions[attribute] || "",
+              dataType: type,
+              paramType: "query"
+            };
 
+            if (model.attributes[attribute].required)
+              param.required = model.attributes[attribute].required;
+
+            if (model.attributes[attribute].unique)
+              param.unique = model.attributes[attribute].unique;
+
+            result.parameters.push(param);
+
+          });
+
+          spec.apis[0].operations.push(result);
+
+          // fs.writeFile(path.resolve(__dirname, outputFolder, modelName + ".json"), JSON.stringify(spec), function(err) {
+          //   if (err) throw err;
+          // });
+
+          fs.writeFile(path.resolve(__dirname, '..', config.docsFolder, modelName + ".yml"), YAML.encode(spec), function(err) {
+            if (err) throw err;
+          });
         });
-
-        spec.apis[0].operations.push(result);
-
-        // fs.writeFile(path.resolve(__dirname, outputFolder, modelName + ".json"), JSON.stringify(spec), function(err) {
-        //   if (err) throw err;
-        // });
-
-        fs.writeFile(path.resolve(__dirname, '..', config.docsFolder, modelName + ".yml"), YAML.encode(spec), function(err) {
-          if (err) throw err;
-        });
-      });
+      
+      }
 
     });
   });

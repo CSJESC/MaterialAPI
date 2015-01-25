@@ -31,19 +31,9 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        manufacturerName
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        parts
                 description: 
                 dataType:    foreignKey
-                paramType:   query
-              - 
-                name:        partsName
-                description: 
-                dataType:    string
                 paramType:   query
           - 
             httpMethod: POST
@@ -70,19 +60,9 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        manufacturerName
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        parts
                 description: 
                 dataType:    foreignKey
-                paramType:   query
-              - 
-                name:        partsName
-                description: 
-                dataType:    string
                 paramType:   query
           - 
             httpMethod: PUT
@@ -109,19 +89,9 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        manufacturerName
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        parts
                 description: 
                 dataType:    foreignKey
-                paramType:   query
-              - 
-                name:        partsName
-                description: 
-                dataType:    string
                 paramType:   query
           - 
             httpMethod: DELETE
@@ -148,17 +118,7 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        manufacturerName
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        parts
                 description: 
                 dataType:    foreignKey
-                paramType:   query
-              - 
-                name:        partsName
-                description: 
-                dataType:    string
                 paramType:   query

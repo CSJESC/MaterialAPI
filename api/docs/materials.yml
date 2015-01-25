@@ -26,6 +26,11 @@
                 dataType:    string
                 paramType:   query
               - 
+                name:        links
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
                 name:        recyclingRating
                 description: The environment-rating of this material
                 dataType:    integer
@@ -36,13 +41,8 @@
                 dataType:    integer
                 paramType:   query
               - 
-                name:        countryRating
-                description: The rating of working and political conditions in the country where this material is mined
-                dataType:    int
-                paramType:   query
-              - 
                 name:        minedIn
-                description: The land where the material originally come from
+                description: The country where the material originally come from
                 dataType:    foreignKey
                 paramType:   query
               - 
@@ -70,6 +70,11 @@
                 dataType:    string
                 paramType:   query
               - 
+                name:        links
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
                 name:        recyclingRating
                 description: The environment-rating of this material
                 dataType:    integer
@@ -80,13 +85,8 @@
                 dataType:    integer
                 paramType:   query
               - 
-                name:        countryRating
-                description: The rating of working and political conditions in the country where this material is mined
-                dataType:    int
-                paramType:   query
-              - 
                 name:        minedIn
-                description: The land where the material originally come from
+                description: The country where the material originally come from
                 dataType:    foreignKey
                 paramType:   query
               - 
@@ -114,6 +114,11 @@
                 dataType:    string
                 paramType:   query
               - 
+                name:        links
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
                 name:        recyclingRating
                 description: The environment-rating of this material
                 dataType:    integer
@@ -124,13 +129,8 @@
                 dataType:    integer
                 paramType:   query
               - 
-                name:        countryRating
-                description: The rating of working and political conditions in the country where this material is mined
-                dataType:    int
-                paramType:   query
-              - 
                 name:        minedIn
-                description: The land where the material originally come from
+                description: The country where the material originally come from
                 dataType:    foreignKey
                 paramType:   query
               - 
@@ -158,6 +158,11 @@
                 dataType:    string
                 paramType:   query
               - 
+                name:        links
+                description: 
+                dataType:    string
+                paramType:   query
+              - 
                 name:        recyclingRating
                 description: The environment-rating of this material
                 dataType:    integer
@@ -168,13 +173,8 @@
                 dataType:    integer
                 paramType:   query
               - 
-                name:        countryRating
-                description: The rating of working and political conditions in the country where this material is mined
-                dataType:    int
-                paramType:   query
-              - 
                 name:        minedIn
-                description: The land where the material originally come from
+                description: The country where the material originally come from
                 dataType:    foreignKey
                 paramType:   query
               - 

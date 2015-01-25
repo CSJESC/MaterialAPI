@@ -31,29 +31,14 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        materialsName
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        inDevices
                 description: 
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        inDevicesNames
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        manufacturer
                 description: The ID of the manufacturer
                 dataType:    foreignKey
-                paramType:   query
-              - 
-                name:        manufacturerName
-                description: 
-                dataType:    string
                 paramType:   query
           - 
             httpMethod: POST
@@ -80,29 +65,14 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        materialsName
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        inDevices
                 description: 
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        inDevicesNames
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        manufacturer
                 description: The ID of the manufacturer
                 dataType:    foreignKey
-                paramType:   query
-              - 
-                name:        manufacturerName
-                description: 
-                dataType:    string
                 paramType:   query
           - 
             httpMethod: PUT
@@ -129,29 +99,14 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        materialsName
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        inDevices
                 description: 
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        inDevicesNames
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        manufacturer
                 description: The ID of the manufacturer
                 dataType:    foreignKey
-                paramType:   query
-              - 
-                name:        manufacturerName
-                description: 
-                dataType:    string
                 paramType:   query
           - 
             httpMethod: DELETE
@@ -178,27 +133,12 @@
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        materialsName
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        inDevices
                 description: 
                 dataType:    foreignKey
                 paramType:   query
               - 
-                name:        inDevicesNames
-                description: 
-                dataType:    string
-                paramType:   query
-              - 
                 name:        manufacturer
                 description: The ID of the manufacturer
                 dataType:    foreignKey
-                paramType:   query
-              - 
-                name:        manufacturerName
-                description: 
-                dataType:    string
                 paramType:   query
