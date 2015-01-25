@@ -25,8 +25,8 @@ module.exports = {
       int: true
     },
     materials: {
-    	collection: "material",
-    	via: "usedIn"
+      collection: "material",
+      via: "usedIn"
     },
     inDevices: {
       model: "device"

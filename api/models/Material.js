@@ -11,7 +11,7 @@ module.exports = {
     recyclingRating: "The environment-rating of this material",
     healthRating: "The health-risks related to this material",
     countryRating: "The rating of working and political conditions in the country where this material is mined",
-    minedIn: "The land where the material originally come from"
+    minedIn: "The country where the material originally come from"
   },
   attributes: {
     name: {
@@ -23,11 +23,16 @@ module.exports = {
     description: {
       type: "string"
     },
+    links: {
+      type: "array",
+      array: true,
+      url: true
+    },
     recyclingRating: {
       type: "integer",
       int: true,
       min: 1,
-      max: 5
+      max: 100
     },
     healthRating: {
       type: "integer",
@@ -35,43 +40,15 @@ module.exports = {
       min: 0,
       max: 4
     },
-    countryRating: {
-      type: "int",
-      int: true,
-      min: 1,
-      max: 5
-    },
     minedIn: {
-      collection: "land",
+      collection: "country",
       via: "materials"
     },
     usedIn: {
-      model: "part"
+      collection: "part",
+      via: "materials",
+      dominant: true
     },
-  },
-  beforeCreate: function(values, cb) {
-    
-    if (typeof values.minedIn === "Array") {
-      var sum = 0;
-      values.minedIn.forEach(function(countryID) {
-        Land.find({id: countryID}).exec(function(err, response) {
-          if (err) sails.log(err);
-
-          sum += response.totalRating
-        });
-      });
-
-      values.countryRating = sum / values.minedIn.length;
-      cb();
-    } else {
-      Land.find({id: values.minedIn}).exec(function(err, response) {
-        if (err) sails.log(err);
-
-        values.countryRating = response[0].totalRating;
-        cb();
-      }); 
-    }
-
   }
 };
 
