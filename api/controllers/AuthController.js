@@ -69,7 +69,7 @@ var AuthController = {
    */
   logout: function (req, res) {
     req.logout();
-    res.redirect('/');
+    res.redirect('http://materia.localhorst.io');
   },
 
   /**
@@ -147,7 +147,7 @@ var AuthController = {
           res.redirect('back');
           break;
         default:
-          res.redirect('/');
+          res.redirect('http://materia.localhorst.io/');
       }
     }
 
@@ -163,7 +163,7 @@ var AuthController = {
 
         // Upon successful login, send the user to the homepage were req.user
         // will available.
-        res.redirect('/');
+        res.redirect('http://materia.localhorst.io/');
       });
     });
   },
