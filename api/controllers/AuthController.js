@@ -69,7 +69,7 @@ var AuthController = {
    */
   logout: function (req, res) {
     req.logout();
-    res.redirect('http://materia.localhorst.io');
+    res.redirect('http://materia.localhorst.io/');
   },
 
   /**
