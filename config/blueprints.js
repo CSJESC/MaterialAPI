@@ -145,6 +145,6 @@ module.exports.blueprints = {
   *                                                                           *
   ****************************************************************************/
 
-  defaultLimit: Number.MAX_VALUE
+  defaultLimit: 0
 
 };
