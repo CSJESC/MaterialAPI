@@ -28,11 +28,15 @@ module.exports = {
       array: true,
       url: true
     },
+    youtube: {
+      type: "url",
+      url: true
+    },
     recyclingRating: {
       type: "integer",
       int: true,
       min: 1,
-      max: 100
+      max: 4
     },
     healthRating: {
       type: "integer",
@@ -48,7 +52,7 @@ module.exports = {
       collection: "part",
       via: "materials",
       dominant: true
-    },
+    }
   }
 };
 
