@@ -26,12 +26,33 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  '*': ['passport'],
-
+/*  MaterialController: {
+    create: 'protectedAttributes'
+  },*/
   'auth': {
-    '*': ['passport']
+    '*': true
+  },
+  '*': 'sessionAuth',
+  'material': {
+    'find': true,
+    'findOne': true
+  },
+  'country': {
+    'find': true,
+    'findOne': true
+  },
+  'device': {
+    'find': true,
+    'findOne': true
+  },
+  'manufacturer': {
+    'find': true,
+    'findOne': true
+  },
+  'part': {
+    'find': true,
+    'findOne': true
   }
-  // '*': true,
 
   /***************************************************************************
   *                                                                          *
