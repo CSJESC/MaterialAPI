@@ -12,6 +12,22 @@ var swagger = require("swagger-express");
 var fs = require("fs-extra");
 var path = require("path");
 
+var passport = require('passport'),
+    GitHubStrategy = require('passport-github').Strategy,
+    TwitterStrategy = require('passport-twitter').Strategy;
+    // GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
+
+
+passport.serializeUser(function (user, done) {
+    done(null, user.uid);
+});
+
+passport.deserializeUser(function (uid, done) {
+    User.findOne({uid: uid}).exec(function (err, user) {
+        done(err, user)
+    });
+});
+
 module.exports.http = {
 
   /****************************************************************************
@@ -93,6 +109,32 @@ module.exports.http = {
   ***************************************************************************/
 
   customMiddleware: function(app) {
+
+    passport.use(new GitHubStrategy({
+        clientID: sails.config.auth.github.consumerKey,
+        clientSecret: sails.config.auth.github.consumerSecret,
+        callbackURL: sails.config.basePath() + "/auth/github/callback"
+      },
+      login
+    ));
+
+    passport.use(new TwitterStrategy({
+        consumerKey: sails.config.auth.twitter.consumerKey,
+        consumerSecret: sails.config.auth.twitter.consumerSecret,
+        callbackURL: sails.config.basePath() + "/auth/twitter/callback"
+      },
+      login
+    ));
+
+    /*passport.use(new GoogleStrategy({
+        clientID: sails.config.auth.google.consumerKey,
+        clientSecret: sails.config.auth.google.consumerSecret,
+        callbackURL: sails.config.basePath() + "/auth/google/callback"
+      },
+      login
+    ));*/
+    
+    
     var basePath = sails.config.basePath() + sails.config.blueprints.prefix;
 
     var files = fs.readdirSync(sails.config.swagger.docsFolder).map(function(file) {
@@ -113,8 +155,8 @@ module.exports.http = {
         description: sails.config.swagger.description
       },
       apis: files
-    }));
-
+    })).use(passport.initialize())
+      .use(passport.session());
   }
 
 };
