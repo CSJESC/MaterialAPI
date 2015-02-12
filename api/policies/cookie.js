@@ -9,11 +9,7 @@
  */
 module.exports = function(req, res, next) {
 
-  // User is allowed, proceed to the next policy,
-  // or if this is the last policy, the controller
   res.cookie('OA', req.isAuthenticated());
 
-  // User is not allowed
-  // (default res.forbidden() behavior can be overridden in `config/403.js`)
   next();
 };

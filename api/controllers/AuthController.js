@@ -59,7 +59,6 @@ module.exports = {
     twitter: function (req, res) {
         passport.authenticate('twitter', { failureRedirect: '/' },
             function (err, user) {
-                console.log(req.user);
                 req.logIn(res, function (err) {
                     if (err) {
                         console.log(err);
