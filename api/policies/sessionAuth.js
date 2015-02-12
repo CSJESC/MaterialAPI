@@ -12,7 +12,7 @@ module.exports = function(req, res, next) {
   // User is allowed, proceed to the next policy,
   // or if this is the last policy, the controller
   if (req.isAuthenticated()) {
-    req.cookies.auth = true;
+    res.cookie('auth', '1', { expires: new Date(Date.now() + 900000), httpOnly: true });
     return next();
   }
 
