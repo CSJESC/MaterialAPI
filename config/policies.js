@@ -32,30 +32,30 @@ module.exports.policies = {
   'auth': {
     '*': true
   },
-  '*': 'sessionAuth',
+  '*': ['cookie', 'sessionAuth'],
   'material': {
-    'find': true,
-    'findOne': true
+    'find': ['cookie'],
+    'findOne': ['cookie']
   },
   'country': {
-    'find': true,
-    'findOne': true
+    'find': ['cookie'],
+    'findOne': ['cookie']
   },
   'device': {
-    'find': true,
-    'findOne': true
+    'find': ['cookie'],
+    'findOne': ['cookie']
   },
   'manufacturer': {
-    'find': true,
-    'findOne': true
+    'find': ['cookie'],
+    'findOne': ['cookie']
   },
   'part': {
-    'find': true,
-    'findOne': true
+    'find': ['cookie'],
+    'findOne': ['cookie']
   },
   'mined': {
-    'find': true,
-    'findOne': true    
+    'find': ['cookie'],
+    'findOne': ['cookie']    
   }
 
   /***************************************************************************
