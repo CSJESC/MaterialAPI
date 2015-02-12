@@ -16,6 +16,7 @@
  */
 
 var passport = require('passport');
+var redirectRoute = '/discover/#uploader';
 
 module.exports = {
 
@@ -47,7 +48,7 @@ module.exports = {
                         return;
                     }
 
-                    res.redirect('/');
+                    res.redirect(redirectRoute);
                     return;
                 });
             })(req, res);
@@ -66,7 +67,7 @@ module.exports = {
                         return;
                     }
 
-                    res.redirect('/');
+                    res.redirect(redirectRoute);
                     return;
                 });
             })(req, res);
@@ -85,7 +86,7 @@ module.exports = {
                         return;
                     }
 
-                    res.redirect('/');
+                    res.redirect(redirectRoute);
                     return;
                 });
             })(req, res);
