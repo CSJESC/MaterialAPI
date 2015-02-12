@@ -52,6 +52,10 @@ module.exports.policies = {
   'part': {
     'find': true,
     'findOne': true
+  },
+  'mined': {
+    'find': true,
+    'findOne': true    
   }
 
   /***************************************************************************
