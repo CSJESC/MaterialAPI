@@ -12,7 +12,7 @@
 
 module.exports = {
   basePath: function() {
-    return 'http://materia.localhorst.io';
+    return 'http://phones.dontgrowontre.es';
   },
 
   /***************************************************************************
