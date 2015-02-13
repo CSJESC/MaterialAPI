@@ -1,74 +1,61 @@
 
-    resourcePath:   /devices
+    resourcePath:   /mined
     swaggerVersion: 1.2.5
     basePath:       /api/v1
     apis:           
       - 
-        path:       /devices
+        path:       /mined
         operations: 
           - 
             httpMethod: GET
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   getdevices
+            nickname:   getmined
             parameters: 
               - 
-                name:        name
-                description: The name of the device
-                dataType:    string
-                paramType:   query
-                unique:      true
-              - 
-                name:        weight
-                description: The total weight of the device
+                name:        country_materials
+                description: 
                 dataType:    integer
                 paramType:   query
               - 
-                name:        manufacturer
+                name:        material_minedIn
                 description: 
-                dataType:    foreignKey
+                dataType:    integer
                 paramType:   query
               - 
-                name:        parts
+                name:        share
                 description: 
-                dataType:    foreignKey
+                dataType:    integer
                 paramType:   query
           - 
             httpMethod: POST
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   postdevices
+            nickname:   postmined
             parameters: 
               - 
-                name:        name
-                description: The name of the device
-                dataType:    string
-                paramType:   query
-                required:    true
-                unique:      true
-              - 
-                name:        weight
-                description: The total weight of the device
+                name:        country_materials
+                description: 
                 dataType:    integer
                 paramType:   query
               - 
-                name:        manufacturer
+                name:        material_minedIn
                 description: 
-                dataType:    foreignKey
+                dataType:    integer
                 paramType:   query
               - 
-                name:        parts
+                name:        share
                 description: 
-                dataType:    foreignKey
+                dataType:    integer
                 paramType:   query
           - 
             httpMethod: PUT
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   putdevices
+            nickname:   putmined
             parameters: 
               - 
                 name:        id
@@ -77,32 +64,26 @@
                 paramType:   query
                 required:    true
               - 
-                name:        name
-                description: The name of the device
-                dataType:    string
-                paramType:   query
-                unique:      true
-              - 
-                name:        weight
-                description: The total weight of the device
+                name:        country_materials
+                description: 
                 dataType:    integer
                 paramType:   query
               - 
-                name:        manufacturer
+                name:        material_minedIn
                 description: 
-                dataType:    foreignKey
+                dataType:    integer
                 paramType:   query
               - 
-                name:        parts
+                name:        share
                 description: 
-                dataType:    foreignKey
+                dataType:    integer
                 paramType:   query
           - 
             httpMethod: DELETE
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   deletedevices
+            nickname:   deletemined
             parameters: 
               - 
                 name:        id
@@ -111,23 +92,17 @@
                 paramType:   query
                 required:    true
               - 
-                name:        name
-                description: The name of the device
-                dataType:    string
-                paramType:   query
-                unique:      true
-              - 
-                name:        weight
-                description: The total weight of the device
+                name:        country_materials
+                description: 
                 dataType:    integer
                 paramType:   query
               - 
-                name:        manufacturer
+                name:        material_minedIn
                 description: 
-                dataType:    foreignKey
+                dataType:    integer
                 paramType:   query
               - 
-                name:        parts
+                name:        share
                 description: 
-                dataType:    foreignKey
+                dataType:    integer
                 paramType:   query

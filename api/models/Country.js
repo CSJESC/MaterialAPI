@@ -8,10 +8,11 @@
 module.exports = {
   descriptions: {
     name: "The country's name",
-    mineralIndustryRating: "The Mineral Industry rating fo this country",
-    workingConditionRating: "The rating about the Rating Codintions in this country",
-    humanRightsRating: "The rating about Human Rights in this country",
-    localAvarageSalary: "The local avarage salary in this country"
+    mineralIndustryRating: "The Mineral Industry rating fo this country (0-70)",
+    workingConditionRating: "The rating about the Rating Codintions in this country (1-5)",
+    humanRightsRating: "The rating about Human Rights in this country (0-100)",
+    localAvarageSalary: "The local avarage salary in this country",
+    materials: "The id of the materials mined in this country"
   },
   attributes: {
     name: {

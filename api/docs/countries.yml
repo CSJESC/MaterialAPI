@@ -1,28 +1,27 @@
 
-    resourcePath:   /countrys
+    resourcePath:   /countries
     swaggerVersion: 1.2.5
     basePath:       /api/v1
     apis:           
       - 
-        path:       /countrys
+        path:       /countries
         operations: 
           - 
             httpMethod: GET
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   getcountrys
+            nickname:   getcountries
             parameters: 
               - 
                 name:        name
                 description: The country's name
                 dataType:    string
                 paramType:   query
-                required:    true
                 unique:      true
               - 
                 name:        mineralIndustryRating
-                description: The Mineral Industry rating fo this country
+                description: The Mineral Industry rating fo this country (0-70)
                 dataType:    integer
                 paramType:   query
               - 
@@ -32,7 +31,7 @@
                 paramType:   query
               - 
                 name:        humanRightsRating
-                description: The rating about Human Rights in this country
+                description: The rating about Human Rights in this country (0-100)
                 dataType:    integer
                 paramType:   query
               - 
@@ -47,7 +46,7 @@
                 paramType:   query
               - 
                 name:        materials
-                description: 
+                description: The id of the materials mined in this country
                 dataType:    foreignKey
                 paramType:   query
           - 
@@ -55,7 +54,7 @@
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   postcountrys
+            nickname:   postcountries
             parameters: 
               - 
                 name:        name
@@ -66,7 +65,7 @@
                 unique:      true
               - 
                 name:        mineralIndustryRating
-                description: The Mineral Industry rating fo this country
+                description: The Mineral Industry rating fo this country (0-70)
                 dataType:    integer
                 paramType:   query
               - 
@@ -76,7 +75,7 @@
                 paramType:   query
               - 
                 name:        humanRightsRating
-                description: The rating about Human Rights in this country
+                description: The rating about Human Rights in this country (0-100)
                 dataType:    integer
                 paramType:   query
               - 
@@ -91,7 +90,7 @@
                 paramType:   query
               - 
                 name:        materials
-                description: 
+                description: The id of the materials mined in this country
                 dataType:    foreignKey
                 paramType:   query
           - 
@@ -99,18 +98,23 @@
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   putcountrys
+            nickname:   putcountries
             parameters: 
+              - 
+                name:        id
+                description: The id of the element
+                dataType:    integer
+                paramType:   query
+                required:    true
               - 
                 name:        name
                 description: The country's name
                 dataType:    string
                 paramType:   query
-                required:    true
                 unique:      true
               - 
                 name:        mineralIndustryRating
-                description: The Mineral Industry rating fo this country
+                description: The Mineral Industry rating fo this country (0-70)
                 dataType:    integer
                 paramType:   query
               - 
@@ -120,7 +124,7 @@
                 paramType:   query
               - 
                 name:        humanRightsRating
-                description: The rating about Human Rights in this country
+                description: The rating about Human Rights in this country (0-100)
                 dataType:    integer
                 paramType:   query
               - 
@@ -135,7 +139,7 @@
                 paramType:   query
               - 
                 name:        materials
-                description: 
+                description: The id of the materials mined in this country
                 dataType:    foreignKey
                 paramType:   query
           - 
@@ -143,18 +147,23 @@
             consumes:   application/json
             produces:   application/json
             protocols:  http
-            nickname:   deletecountrys
+            nickname:   deletecountries
             parameters: 
+              - 
+                name:        id
+                description: The id of the element
+                dataType:    integer
+                paramType:   query
+                required:    true
               - 
                 name:        name
                 description: The country's name
                 dataType:    string
                 paramType:   query
-                required:    true
                 unique:      true
               - 
                 name:        mineralIndustryRating
-                description: The Mineral Industry rating fo this country
+                description: The Mineral Industry rating fo this country (0-70)
                 dataType:    integer
                 paramType:   query
               - 
@@ -164,7 +173,7 @@
                 paramType:   query
               - 
                 name:        humanRightsRating
-                description: The rating about Human Rights in this country
+                description: The rating about Human Rights in this country (0-100)
                 dataType:    integer
                 paramType:   query
               - 
@@ -179,6 +188,6 @@
                 paramType:   query
               - 
                 name:        materials
-                description: 
+                description: The id of the materials mined in this country
                 dataType:    foreignKey
                 paramType:   query

@@ -18,17 +18,21 @@
                 description: The name of the material
                 dataType:    string
                 paramType:   query
-                required:    true
                 unique:      true
               - 
                 name:        description
-                description: 
+                description: A description of the material
                 dataType:    string
                 paramType:   query
               - 
                 name:        links
-                description: 
+                description: Some informative links about this material
                 dataType:    string
+                paramType:   query
+              - 
+                name:        youtube
+                description: A link to the episode of Table Of Periodic Videos about this material
+                dataType:    url
                 paramType:   query
               - 
                 name:        recyclingRating
@@ -47,7 +51,7 @@
                 paramType:   query
               - 
                 name:        usedIn
-                description: 
+                description: The ID of the parts/components where this material is used for
                 dataType:    foreignKey
                 paramType:   query
           - 
@@ -66,13 +70,18 @@
                 unique:      true
               - 
                 name:        description
-                description: 
+                description: A description of the material
                 dataType:    string
                 paramType:   query
               - 
                 name:        links
-                description: 
+                description: Some informative links about this material
                 dataType:    string
+                paramType:   query
+              - 
+                name:        youtube
+                description: A link to the episode of Table Of Periodic Videos about this material
+                dataType:    url
                 paramType:   query
               - 
                 name:        recyclingRating
@@ -91,7 +100,7 @@
                 paramType:   query
               - 
                 name:        usedIn
-                description: 
+                description: The ID of the parts/components where this material is used for
                 dataType:    foreignKey
                 paramType:   query
           - 
@@ -102,21 +111,31 @@
             nickname:   putmaterials
             parameters: 
               - 
+                name:        id
+                description: The id of the element
+                dataType:    integer
+                paramType:   query
+                required:    true
+              - 
                 name:        name
                 description: The name of the material
                 dataType:    string
                 paramType:   query
-                required:    true
                 unique:      true
               - 
                 name:        description
-                description: 
+                description: A description of the material
                 dataType:    string
                 paramType:   query
               - 
                 name:        links
-                description: 
+                description: Some informative links about this material
                 dataType:    string
+                paramType:   query
+              - 
+                name:        youtube
+                description: A link to the episode of Table Of Periodic Videos about this material
+                dataType:    url
                 paramType:   query
               - 
                 name:        recyclingRating
@@ -135,7 +154,7 @@
                 paramType:   query
               - 
                 name:        usedIn
-                description: 
+                description: The ID of the parts/components where this material is used for
                 dataType:    foreignKey
                 paramType:   query
           - 
@@ -146,21 +165,31 @@
             nickname:   deletematerials
             parameters: 
               - 
+                name:        id
+                description: The id of the element
+                dataType:    integer
+                paramType:   query
+                required:    true
+              - 
                 name:        name
                 description: The name of the material
                 dataType:    string
                 paramType:   query
-                required:    true
                 unique:      true
               - 
                 name:        description
-                description: 
+                description: A description of the material
                 dataType:    string
                 paramType:   query
               - 
                 name:        links
-                description: 
+                description: Some informative links about this material
                 dataType:    string
+                paramType:   query
+              - 
+                name:        youtube
+                description: A link to the episode of Table Of Periodic Videos about this material
+                dataType:    url
                 paramType:   query
               - 
                 name:        recyclingRating
@@ -179,6 +208,6 @@
                 paramType:   query
               - 
                 name:        usedIn
-                description: 
+                description: The ID of the parts/components where this material is used for
                 dataType:    foreignKey
                 paramType:   query

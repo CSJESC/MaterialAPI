@@ -11,7 +11,11 @@ module.exports = {
     recyclingRating: "The environment-rating of this material",
     healthRating: "The health-risks related to this material",
     countryRating: "The rating of working and political conditions in the country where this material is mined",
-    minedIn: "The country where the material originally come from"
+    minedIn: "The country where the material originally come from",
+    description: "A description of the material",
+    links: "Some informative links about this material",
+    youtube: "A link to the episode of Table Of Periodic Videos about this material",
+    usedIn: "The ID of the parts/components where this material is used for"
   },
   attributes: {
     name: {

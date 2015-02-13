@@ -21,9 +21,13 @@ fs.readdir(modelsDir, function(err, files) {
     if (err) throw err;
 
     files.forEach(function(file) {
-      if (file !== 'Passport.js' && file !== 'User.js') {
+      if (file !== 'Passport.js' && file !== 'User.js' && file !== 'Auth.js') {
         var model = require(path.resolve(__dirname, '..', modelsDir, file));
-        var modelName = file.replace(".js", "").toLowerCase() + "s";
+        var modelName = file.replace(".js", "").toLowerCase();
+        
+        if (file === 'Country.js') modelName = 'countries';
+        else if (file !== 'Mined.js') modelName = modelName + "s";
+        
         var resourcePath = "/" + modelName;
 
         var spec = {
@@ -46,6 +50,16 @@ fs.readdir(modelsDir, function(err, files) {
             parameters: []
           };
 
+          if (method === "PUT" || method === "DELETE") {
+            var param = {
+              name: "id",
+              description: "The id of the element",
+              dataType: "integer",
+              paramType: "query",
+              required: true
+            };
+            result.parameters.push(param);
+          }
           Object.keys(model.attributes).forEach(function(attribute) {
 
             var type = model.attributes[attribute].type;
@@ -55,14 +69,15 @@ fs.readdir(modelsDir, function(err, files) {
               type = "foreignKey";
             }
 
+            if (model.descriptions) var desc = model.descriptions[attribute];
             var param = {
               name: attribute,
-              description: model.descriptions[attribute] || "",
+              description: desc || "",
               dataType: type,
               paramType: "query"
             };
 
-            if (model.attributes[attribute].required)
+            if (model.attributes[attribute].required && method === 'POST')
               param.required = model.attributes[attribute].required;
 
             if (model.attributes[attribute].unique)
